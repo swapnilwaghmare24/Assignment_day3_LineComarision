@@ -33,6 +33,21 @@ public class LineComparision
 			System.out.println("Line1 and Line2 are not equal");	
 		}
 	}
+	void useCompareToCheck(String length1,String length2)
+	{
+			if(length1.compareTo(length2)>0)
+			{
+				System.out.println("Line1 is greater than Line2");
+			}
+			else if(length1.compareTo(length2)<0)
+			{
+				System.out.println("Line1 is smaller than Line2");
+			}
+			else
+			{
+				System.out.println("Line1 is equal to Line2");	
+			}
+	}
 	public static void main(String[] args)
 	{
 		System.out.println("Welcome to line comparision computation program");
@@ -46,6 +61,7 @@ public class LineComparision
 		String length2=lc.calLength();
 		System.out.println("Length of line1 is "+length2);
 		lc.useEqualsToCheck(length1,length2);
+		lc.useCompareToCheck(length1,length2);
 		
 	}
 }
