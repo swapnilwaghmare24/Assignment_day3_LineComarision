@@ -21,6 +21,18 @@ public class LineComparision
 		String length=String.valueOf(Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2)));
 		return length;
 	}
+	
+	void useEqualsToCheck(String length1,String length2)
+	{
+		if(length1.equals(length2))
+		{
+			System.out.println("Line1 and Line2 are equal");
+		}
+		else
+		{
+			System.out.println("Line1 and Line2 are not equal");	
+		}
+	}
 	public static void main(String[] args)
 	{
 		System.out.println("Welcome to line comparision computation program");
@@ -33,6 +45,7 @@ public class LineComparision
 		lc.getCoordinates();
 		String length2=lc.calLength();
 		System.out.println("Length of line1 is "+length2);
+		lc.useEqualsToCheck(length1,length2);
 		
 	}
 }
